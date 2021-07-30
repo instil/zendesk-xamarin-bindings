@@ -1,29 +1,17 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Mostly to be written…
 
-### What is this repository for? ###
+### Get SDKs
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+```bash
+$ git submodule update --init --recursive
+```
 
-### How do I get set up? ###
+### Generate iOS Bindings
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+We use Objective Sharpie
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+```bash
+$ sharpie bind --sdk=iphoneos14.5 --output="XamarinApiDef" --namespace="Binding" --scope="sdk_messaging_ios/ZendeskSDKMessaging.framework/Headers/" "sdk_messaging_ios/ZendeskSDKMessaging.framework/Headers/ZendeskSDKMessaging-Swift.h"
+```
