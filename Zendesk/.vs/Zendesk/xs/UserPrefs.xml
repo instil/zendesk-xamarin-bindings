@@ -1,4 +1,25 @@
 ﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Zendesk-iOS/ApiDefinitions.cs">
+    <Files>
+      <File FileName="Zendesk-iOS/ApiDefinitions.cs" Line="56" Column="3" />
+      <File FileName="Zendesk-iOS/StructsAndEnums.cs" Line="22" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Zendesk" expanded="True">
+            <Node name="Zendesk-iOS" expanded="True" selected="True">
+              <Node name="NativeReferenceFolder" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Zendesk FirstBuild="True" />
 </Properties>

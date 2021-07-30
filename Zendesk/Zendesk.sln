@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.809.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zendesk", "Zendesk\Zendesk.csproj", "{659BF5E3-0F6E-44E8-97D3-DA8FF63F0687}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zendesk-iOS", "Zendesk-iOS\Zendesk-iOS.csproj", "{4B43E92F-5ED9-4D04-AAA7-5F6F81C91ED5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{659BF5E3-0F6E-44E8-97D3-DA8FF63F0687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{659BF5E3-0F6E-44E8-97D3-DA8FF63F0687}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{659BF5E3-0F6E-44E8-97D3-DA8FF63F0687}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{659BF5E3-0F6E-44E8-97D3-DA8FF63F0687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B43E92F-5ED9-4D04-AAA7-5F6F81C91ED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B43E92F-5ED9-4D04-AAA7-5F6F81C91ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B43E92F-5ED9-4D04-AAA7-5F6F81C91ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B43E92F-5ED9-4D04-AAA7-5F6F81C91ED5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4E63F95B-7265-4C25-8DF4-233F6881EDBE}
+		SolutionGuid = {D05CEEAA-5007-4DF6-AA13-EA3988E543AA}
 	EndGlobalSection
 EndGlobal
