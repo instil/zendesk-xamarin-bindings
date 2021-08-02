@@ -1,0 +1,6 @@
+framework module ZendeskiOS {
+  umbrella header "ZendeskiOS.h"
+
+  export *
+  module * { export * }
+}

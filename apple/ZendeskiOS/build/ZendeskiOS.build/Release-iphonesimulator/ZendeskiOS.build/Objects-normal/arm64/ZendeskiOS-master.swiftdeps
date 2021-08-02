@@ -1,5 +1,0 @@
-version: "Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)"
-options: "ea9f51a04026d7fcae8d7ff91eab04bc"
-build_time: [1627901179, 983870000]
-inputs:
-  "/Users/niallkelly/Instil/zendesk-xamarin-bindings/apple/ZendeskiOS/ZendeskiOS/ZendeskiOS.swift": [9223372036, 854775807]

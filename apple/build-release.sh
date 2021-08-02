@@ -8,7 +8,7 @@ echo "Building iOS framework"
 xcodebuild -workspace ZendeskiOS/ZendeskiOS.xcworkspace -scheme ZendeskiOS -configuration Release -sdk iphoneos clean build \
   CONFIGURATION_BUILD_DIR=$(pwd)/build/frameworks/iOS
 
-xcodebuild -workspace ZendeskiOS/ZendeskiOS.xcworkspace -scheme ZendeskiOS -configuration Release -sdk iphonesimulator clean build \
+xcodebuild -workspace ZendeskiOS/ZendeskiOS.xcworkspace -scheme ZendeskiOS -configuration Release -sdk iphonesimulator -arch x86_64 clean build \
   CONFIGURATION_BUILD_DIR=$(pwd)/build/frameworks/iOS/simulator
 
 cd build/frameworks/iOS
@@ -17,6 +17,6 @@ if [ -d "simulator/ZendeskiOS.framework/Modules/ZendeskiOS.swiftmodule" ]; then
   cp -r simulator/ZendeskiOS.framework/Modules/ZendeskiOS.swiftmodule/* ZendeskiOS.framework/Modules/ZendeskiOS.swiftmodule/
 fi
 
-lipo -create -output libZendeskiOS.a libZendeskiOS.a simulator/libZendeskiOS.a
+lipo -create -output ZendeskiOS.framework/ZendeskiOS ZendeskiOS.framework/ZendeskiOS simulator/ZendeskiOS.framework/ZendeskiOS
 
 rm -rf simulator

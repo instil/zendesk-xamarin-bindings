@@ -13,5 +13,5 @@ $ git submodule update --init --recursive
 We use Objective Sharpie from top level dir
 
 ```bash
-$ sharpie bind --sdk=iphoneos14.5 --output="XamarinZendeskDefinition" --namespace="ZendeskMessaging" --scope="sdk_messaging_ios/ZendeskSDKMessaging.framework/Headers/" "sdk_messaging_ios/ZendeskSDKMessaging.framework/Headers/ZendeskSDKMessaging-Swift.h"
+$ sharpie bind --sdk=iphoneos14.5 --output="XamarinZendeskDefinition" --namespace="ZendeskMessaging" --scope="apple/build/frameworks/iOS/ZendeskiOS.framework/Headers/ZendeskiOS.h"
 ```
