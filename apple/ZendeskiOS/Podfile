@@ -1,8 +1,3 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
-
 target 'ZendeskiOS' do
-  pod 'ZendeskAnswerBotSDK' 
-  pod 'ZendeskChatSDK'      
-  pod 'ZendeskSupportSDK'   
+  pod 'ZendeskChatSDK'   # Support-only on the Unified SDK
 end
