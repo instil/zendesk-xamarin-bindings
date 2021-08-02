@@ -1,3 +1,0 @@
-[submodule "sdk_messaging_ios"]
-	path = sdk_messaging_ios
-	url = git@github.com:zendesk/sdk_messaging_ios.git
