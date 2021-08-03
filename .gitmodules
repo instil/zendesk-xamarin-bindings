@@ -1,0 +1,18 @@
+[submodule "apple/chat_sdk_ios"]
+	path = apple/chat_sdk_ios
+	url = git@github.com:zendesk/chat_sdk_ios.git
+[submodule "apple/chat_providers_sdk_ios"]
+	path = apple/chat_providers_sdk_ios
+	url = git@github.com:zendesk/chat_providers_sdk_ios.git
+[submodule "apple/messaging_sdk_ios"]
+	path = apple/messaging_sdk_ios
+	url = git@github.com:zendesk/messaging_sdk_ios.git
+[submodule "apple/commonui_sdk_ios"]
+	path = apple/commonui_sdk_ios
+	url = git@github.com:zendesk/commonui_sdk_ios.git
+[submodule "apple/messagingapi_sdk_ios"]
+	path = apple/messagingapi_sdk_ios
+	url = git@github.com:zendesk/messagingapi_sdk_ios.git
+[submodule "apple/sdkconfigurations_sdk_ios"]
+	path = apple/sdkconfigurations_sdk_ios
+	url = git@github.com:zendesk/sdkconfigurations_sdk_ios.git
