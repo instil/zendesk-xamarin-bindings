@@ -2,9 +2,12 @@
 
 Mostly to be written…
 
-### Get SDKs
+## iOS
+
+### Get iOS SDKs
 
 ```bash
+$ cd apple
 $ git submodule update --init --recursive
 ```
 
@@ -15,17 +18,17 @@ https://github.com/xamarin/xamarin-macios/issues/6246#issuecomment-825584496
 We use Objective Sharpie from top level dir
 
 ```bash
-$ sharpie bind --sdk=iphoneos14.5 --output="ChatSDK-Definitions" --namespace="ZendeskiOS" --scope="chat_sdk_ios/ChatSDK.framework/Headers" "chat_sdk_ios/ChatSDK.framework/Headers/ChatSDK-Swift.h"
+$ sharpie bind --sdk=iphoneos14.5 --output="-Definitions/ChatSDK" --namespace="ZendeskiOS" --scope="chat_sdk_ios/ChatSDK.framework/Headers" "chat_sdk_ios/ChatSDK.framework/Headers/ChatSDK-Swift.h"
 
-$ sharpie bind --sdk=iphoneos14.5 --output="ChatProvidersSDK-Definitions" --namespace="ZendeskiOS" --scope="chat_providers_sdk_ios/ChatProvidersSDK.framework/Headers" "chat_providers_sdk_ios/ChatProvidersSDK.framework/Headers/ChatProvidersSDK-Swift.h"
+$ sharpie bind --sdk=iphoneos14.5 --output="Definitions/ChatProvidersSDK" --namespace="ZendeskiOS" --scope="chat_providers_sdk_ios/ChatProvidersSDK.framework/Headers" "chat_providers_sdk_ios/ChatProvidersSDK.framework/Headers/ChatProvidersSDK-Swift.h"
 
-$ sharpie bind --sdk=iphoneos14.5 --output="MessagingSDK-Definitions" --namespace="ZendeskiOS" --scope="messaging_sdk_ios/MessagingSDK.framework/Headers" "messaging_sdk_ios/MessagingSDK.framework/Headers/MessagingSDK-Swift.h"
+$ sharpie bind --sdk=iphoneos14.5 --output="Definitions/MessagingSDK" --namespace="ZendeskiOS" --scope="messaging_sdk_ios/MessagingSDK.framework/Headers" "messaging_sdk_ios/MessagingSDK.framework/Headers/MessagingSDK-Swift.h"
 
-$ sharpie bind --sdk=iphoneos14.5 --output="MessagingAPI-Definitions" --namespace="ZendeskiOS" --scope="messagingapi_sdk_ios/MessagingAPI.framework/Headers" "messagingapi_sdk_ios/MessagingAPI.framework/Headers/MessagingAPI-Swift.h"
+$ sharpie bind --sdk=iphoneos14.5 --output="Definitions/MessagingAPI" --namespace="ZendeskiOS" --scope="messagingapi_sdk_ios/MessagingAPI.framework/Headers" "messagingapi_sdk_ios/MessagingAPI.framework/Headers/MessagingAPI-Swift.h"
 
-$ sharpie bind --sdk=iphoneos14.5 --output="SDKConfigurations-Definitions" --namespace="ZendeskiOS" --scope="sdkconfigurations_sdk_ios/SDKConfigurations.framework/Headers" "sdkconfigurations_sdk_ios/SDKConfigurations.framework/Headers/SDKConfigurations-Swift.h"
+$ sharpie bind --sdk=iphoneos14.5 --output="Definitions/SDKConfigurations" --namespace="ZendeskiOS" --scope="sdkconfigurations_sdk_ios/SDKConfigurations.framework/Headers" "sdkconfigurations_sdk_ios/SDKConfigurations.framework/Headers/SDKConfigurations-Swift.h"
 
-$ sharpie bind --sdk=iphoneos14.5 --output="CommonUISDK-Definitions" --namespace="ZendeskiOS" --scope="commonui_sdk_ios/CommonUISDK.framework/Headers" "commonui_sdk_ios/CommonUISDK.framework/Headers/CommonUISDK-Swift.h"
+$ sharpie bind --sdk=iphoneos14.5 --output="Definitions/CommonUISDK" --namespace="ZendeskiOS" --scope="commonui_sdk_ios/CommonUISDK.framework/Headers" "commonui_sdk_ios/CommonUISDK.framework/Headers/CommonUISDK-Swift.h"
 ```
 
 Currently the process from here is quite manual unfortunately. We need to copy and paste the contents of each of the generated `ApiDefinitions.cs` and `StructsAndEnums.cs` files into the main files included in the bindings project. Some parts will not compile and are safe to remove such as all `IsEqual`, `DebugDescription` and `Description` methods. And the Swift categories are safe to add into their main class definitions.
@@ -37,8 +40,9 @@ If other SDK packages need to be supported, then `sharpie` can help produce the 
 Objective Sharpie does not produce perfect binding definitions, some adjustments will almost always need to be made. Particularly around `[Protocol]` which seems to require a `[BaseType(typeof(NSObject))]` to work in generated code.
 
 
+Open the bindings project and check that the definitions are correct for your usage. Then build & run. The output will be produced within the projects `/bin` folder
 
-Once bindings are generated, locate the `ZendeskiOS.dll` file and the `ZendeskiOS.resources` folder and copy them to the project where there are to be used. It's very important that the `.resources` folder lives in the same location as the `.dll` package.
+Once bindings are generated, locate the `ZendeskiOS.dll` file and the `ZendeskiOS.resources` folder within `/bin` and copy them to the project where there are to be used. It's very important that the `.resources` folder lives in the same location as the `.dll` package.
 
 
 ### Use iOS Bindings
