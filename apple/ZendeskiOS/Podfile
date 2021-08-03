@@ -1,3 +1,0 @@
-target 'ZendeskiOS' do
-  pod 'ZendeskChatSDK'   # Support-only on the Unified SDK
-end
