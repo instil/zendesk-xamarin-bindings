@@ -15,17 +15,17 @@ https://github.com/xamarin/xamarin-macios/issues/6246#issuecomment-825584496
 We use Objective Sharpie from top level dir
 
 ```bash
-$ sharpie bind --sdk=iphoneos14.5 --output="ChatSDK" --namespace="ZendeskiOS" --scope="build/frameworks/iOS/ChatSDK.framework/Headers" "build/frameworks/iOS/ChatSDK.framework/Headers/ChatSDK-Swift.h"
+$ sharpie bind --sdk=iphoneos14.5 --output="ChatSDK-Definitions" --namespace="ZendeskiOS" --scope="chat_sdk_ios/ChatSDK.framework/Headers" "chat_sdk_ios/ChatSDK.framework/Headers/ChatSDK-Swift.h"
 
-$ sharpie bind --sdk=iphoneos14.5 --output="ChatProvidersSDK" --namespace="ZendeskiOS" --scope="build/frameworks/iOS/ChatProvidersSDK.framework/Headers" "build/frameworks/iOS/ChatProvidersSDK.framework/Headers/ChatProvidersSDK-Swift.h"
+$ sharpie bind --sdk=iphoneos14.5 --output="ChatProvidersSDK-Definitions" --namespace="ZendeskiOS" --scope="chat_providers_sdk_ios/ChatProvidersSDK.framework/Headers" "chat_providers_sdk_ios/ChatProvidersSDK.framework/Headers/ChatProvidersSDK-Swift.h"
 
-$ sharpie bind --sdk=iphoneos14.5 --output="MessagingSDK" --namespace="ZendeskiOS" --scope="build/frameworks/iOS/MessagingSDK.framework/Headers" "build/frameworks/iOS/MessagingSDK.framework/Headers/MessagingSDK-Swift.h"
+$ sharpie bind --sdk=iphoneos14.5 --output="MessagingSDK-Definitions" --namespace="ZendeskiOS" --scope="messaging_sdk_ios/MessagingSDK.framework/Headers" "messaging_sdk_ios/MessagingSDK.framework/Headers/MessagingSDK-Swift.h"
 
-$ sharpie bind --sdk=iphoneos14.5 --output="MessagingAPI" --namespace="ZendeskiOS" --scope="build/frameworks/iOS/MessagingAPI.framework/Headers" "build/frameworks/iOS/MessagingAPI.framework/Headers/MessagingAPI-Swift.h"
+$ sharpie bind --sdk=iphoneos14.5 --output="MessagingAPI-Definitions" --namespace="ZendeskiOS" --scope="messagingapi_sdk_ios/MessagingAPI.framework/Headers" "messagingapi_sdk_ios/MessagingAPI.framework/Headers/MessagingAPI-Swift.h"
 
-$ sharpie bind --sdk=iphoneos14.5 --output="SDKConfigurations" --namespace="ZendeskiOS" --scope="build/frameworks/iOS/SDKConfigurations.framework/Headers" "build/frameworks/iOS/SDKConfigurations.framework/Headers/SDKConfigurations-Swift.h"
+$ sharpie bind --sdk=iphoneos14.5 --output="SDKConfigurations-Definitions" --namespace="ZendeskiOS" --scope="sdkconfigurations_sdk_ios/SDKConfigurations.framework/Headers" "sdkconfigurations_sdk_ios/SDKConfigurations.framework/Headers/SDKConfigurations-Swift.h"
 
-$ sharpie bind --sdk=iphoneos14.5 --output="CommonUISDK" --namespace="ZendeskiOS" --scope="build/frameworks/iOS/CommonUISDK.framework/Headers" "build/frameworks/iOS/CommonUISDK.framework/Headers/CommonUISDK-Swift.h"
+$ sharpie bind --sdk=iphoneos14.5 --output="CommonUISDK-Definitions" --namespace="ZendeskiOS" --scope="commonui_sdk_ios/CommonUISDK.framework/Headers" "commonui_sdk_ios/CommonUISDK.framework/Headers/CommonUISDK-Swift.h"
 ```
 
 Currently the process from here is quite manual unfortunately. We need to copy and paste the contents of each of the generated `ApiDefinitions.cs` and `StructsAndEnums.cs` files into the main files included in the bindings project. Some parts will not compile and are safe to remove such as all `IsEqual`, `DebugDescription` and `Description` methods. And the Swift categories are safe to add into their main class definitions.
