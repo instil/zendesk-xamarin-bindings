@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EF173654FF85126BC29423C /* libPods-ZendeskiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FD668C7FCDD6B6C3F3147C /* libPods-ZendeskiOS.a */; };
 		7C61ED0126B81F56000DBA21 /* ZendeskiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C61ECFF26B81F56000DBA21 /* ZendeskiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C74CFC826B82A0600B871C4 /* ChatProvidersSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C61ED0926B8209F000DBA21 /* ChatProvidersSDK.xcframework */; };
 		7C74CFC926B82A0600B871C4 /* ChatProvidersSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7C61ED0926B8209F000DBA21 /* ChatProvidersSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -72,6 +73,7 @@
 				7C74CFD226B82A0600B871C4 /* SDKConfigurations.xcframework in Frameworks */,
 				7C74CFC826B82A0600B871C4 /* ChatProvidersSDK.xcframework in Frameworks */,
 				7C74CFCE26B82A0600B871C4 /* MessagingAPI.xcframework in Frameworks */,
+				1EF173654FF85126BC29423C /* libPods-ZendeskiOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
