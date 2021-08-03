@@ -5,6 +5,12 @@ using ObjCRuntime;
 using UIKit;
 
 namespace ZendeskiOS {
+
+	[BaseType (typeof (NSObject))]
+	[Model, Protocol]
+	interface ZDKEngine {
+	}
+
 	// @interface ZDKChatConfiguration : NSObject
 	[BaseType(typeof(NSObject))]
 	interface ZDKChatConfiguration {
@@ -30,7 +36,7 @@ namespace ZendeskiOS {
 	}
 
 	// @interface ZDKChatEngine : NSObject
-	[BaseType(typeof(NSObject))]
+	[BaseType(typeof(ZDKEngine))]
 	[DisableDefaultCtor]
 	interface ZDKChatEngine {
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull id;
@@ -924,21 +930,6 @@ namespace ZendeskiOS {
 		[DesignatedInitializer]
 		IntPtr Constructor(string engineId, string displayName);
 	}
-
-	// @protocol ZDKEngine
-	/*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-*/
-	[BaseType(typeof(NSObject))]
-	[Protocol]
-	interface ZDKEngine {
-	}
 }
 
 namespace ZendeskiOS {
@@ -962,12 +953,7 @@ namespace ZendeskiOS {
 		// @property (nonatomic, weak) id<ZDKMessagingDelegate> _Nullable delegate;
 		[NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
 		NSObject WeakDelegate { get; set; }
-	}
 
-	// @interface MessagingSDK_Swift_241 (ZDKMessaging)
-	[Category]
-	[BaseType(typeof(ZDKMessaging))]
-	interface ZDKMessaging_MessagingSDK_Swift_241 {
 		// -(UIViewController * _Nullable)buildUIWithEngines:(NSArray<id<ZDKEngine>> * _Nonnull)engines configs:(NSArray<id<ZDKConfiguration>> * _Nonnull)configs error:(NSError * _Nullable * _Nullable)error __attribute__((warn_unused_result("")));
 		[Export("buildUIWithEngines:configs:error:")]
 		[return: NullAllowed]
@@ -975,8 +961,8 @@ namespace ZendeskiOS {
 	}
 
 	// @interface ZDKMessagingConfiguration : NSObject <ZDKConfiguration>
-	[BaseType(typeof(NSObject))]
-	interface ZDKMessagingConfiguration : ZDKConfiguration {
+	[BaseType(typeof(ZDKConfiguration))]
+	interface ZDKMessagingConfiguration {
 		// @property (copy, nonatomic) NSString * _Nonnull name;
 		[Export("name")]
 		string Name { get; set; }
