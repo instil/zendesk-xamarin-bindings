@@ -1,0 +1,6 @@
+﻿<metadata>
+  <remove-node path="/api/package[@name='zendesk.messaging']/class[contains(@name, 'Event')]"/>
+  <remove-node path="/api/package[@name='zendesk.messaging']/interface[@name='Engine']/method[contains(@name, 'Event')]"/>
+  <remove-node path="/api/package[@name='zendesk.messaging.components']/interface[contains(@name, 'Listener')]"/>
+  <remove-node path="/api/package[@name='zendesk.messaging.components']/class[contains(@name, 'Listener')]"/>
+</metadata>
