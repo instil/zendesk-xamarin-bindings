@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZendeskChatAndroidBindings", "ZendeskChatAndroidBindings\ZendeskChatAndroidBindings.csproj", "{85C5B425-13F3-493B-8C3D-FF5BF5900426}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZendeskMessagingAndroidBindings", "ZendeskMessagingAndroidBindings\ZendeskMessagingAndroidBindings.csproj", "{DF0EB1BB-5F38-41F5-B592-20EDED29DDDD}"
+EndProject
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "ZendeskXamarinAndroidBindings", "ZendeskXamarinAndroidBindings\ZendeskXamarinAndroidBindings.csproj", "{ADF07522-9D76-4F52-9FD9-DAC59A8C4434}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZendeskSdkConfigurationsAndroidBindings", "ZendeskSdkConfigurationsAndroidBindings\ZendeskSdkConfigurationsAndroidBindings.csproj", "{0A339381-7472-493E-BC45-C635F17BD9AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZendeskMessagingApiAndroidBindings", "ZendeskMessagingApiAndroidBindings\ZendeskMessagingApiAndroidBindings.csproj", "{FBA5B6D6-4B45-47F1-8928-D5FCD7BB5196}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85C5B425-13F3-493B-8C3D-FF5BF5900426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85C5B425-13F3-493B-8C3D-FF5BF5900426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85C5B425-13F3-493B-8C3D-FF5BF5900426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85C5B425-13F3-493B-8C3D-FF5BF5900426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF0EB1BB-5F38-41F5-B592-20EDED29DDDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF0EB1BB-5F38-41F5-B592-20EDED29DDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF0EB1BB-5F38-41F5-B592-20EDED29DDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF0EB1BB-5F38-41F5-B592-20EDED29DDDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF07522-9D76-4F52-9FD9-DAC59A8C4434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF07522-9D76-4F52-9FD9-DAC59A8C4434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF07522-9D76-4F52-9FD9-DAC59A8C4434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF07522-9D76-4F52-9FD9-DAC59A8C4434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A339381-7472-493E-BC45-C635F17BD9AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A339381-7472-493E-BC45-C635F17BD9AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A339381-7472-493E-BC45-C635F17BD9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A339381-7472-493E-BC45-C635F17BD9AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBA5B6D6-4B45-47F1-8928-D5FCD7BB5196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBA5B6D6-4B45-47F1-8928-D5FCD7BB5196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBA5B6D6-4B45-47F1-8928-D5FCD7BB5196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBA5B6D6-4B45-47F1-8928-D5FCD7BB5196}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AAB9BB7-B032-4967-88BD-2ADC07BC904D}
+	EndGlobalSection
+EndGlobal
