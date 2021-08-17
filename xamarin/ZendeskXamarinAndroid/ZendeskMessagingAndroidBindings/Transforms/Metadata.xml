@@ -12,4 +12,8 @@
     <remove-node path="/api/package[@name='zendesk.messaging']/interface[contains(@name, 'Event')]"/>
     <remove-node path="/api/package[@name='zendesk.messaging']/class[contains(@name, 'BelvedereMediaResolverCallback')]"/>
     <remove-node path="/api/package[@name='zendesk.messaging']/class[contains(@name, 'MessagingDialog')]"/>
+    <remove-node path="/api/package[@name='zendesk.messaging']/class[starts-with(@name, 'Update')]"/>
+    <remove-node path="/api/package[@name='zendesk.messaging']/class[starts-with(@name, 'MessagingItem')]"/>
+    <remove-node path="/api/package[@name='zendesk.messaging']/interface[starts-with(@name, 'MessagingScope')]"/>
+    <remove-node path="/api/package[@name='zendesk.messaging']/interface[starts-with(@name, 'MessagingActivityScope')]"/>
 </metadata>
