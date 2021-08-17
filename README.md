@@ -13,8 +13,6 @@ $ git submodule update --init --recursive
 
 ### Generate iOS Bindings
 
-https://github.com/xamarin/xamarin-macios/issues/6246#issuecomment-825584496
-
 We use Objective Sharpie from top level dir
 
 ```bash
@@ -44,6 +42,9 @@ Open the bindings project and check that the definitions are correct for your us
 
 Once bindings are generated, locate the `ZendeskiOS.dll` file and the `ZendeskiOS.resources` folder within `/bin` and copy them to the project where there are to be used. It's very important that the `.resources` folder lives in the same location as the `.dll` package.
 
+For reference:
+https://github.com/xamarin/xamarin-macios/issues/6246#issuecomment-825584496
+
 
 ### Use iOS Bindings
 
@@ -70,3 +71,10 @@ void ShowChat() {
     PresentViewController(viewController, true, null);
 }
 ```
+
+For reference:
+https://developer.zendesk.com/documentation/classic-sdks/unified-sdk/ios/chat_engine/
+
+
+## Android
+
