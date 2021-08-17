@@ -1,4 +1,5 @@
 ﻿<metadata>
+    <remove-node path="/api/package[@name='zendesk.messaging.ui']"/>
 
     <!-- Remove nodes not required in the public Messaging API -->
     <remove-node path="/api/package[@name='zendesk.messaging']/class[contains(@name, 'Factory')]"/>
@@ -7,25 +8,8 @@
     <remove-node path="/api/package[@name='zendesk.messaging']/class[contains(@name, 'Model')]"/>
     <remove-node path="/api/package[@name='zendesk.messaging']/class[contains(@name, 'Component')]"/>
     <remove-node path="/api/package[@name='zendesk.messaging']/class[contains(@name, 'Injector')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging']/class[starts-with(@name, 'BelvedereMediaResolverCallback')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging']/class[starts-with(@name, 'MessagingDialog')]"/>
-
-    <!-- Remove nodes not required in the public Messaging UI API -->
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[contains(@name, 'Factory')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'ResponseOptionsAdapter')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'InputBoxConsumer')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'MessagingComposer')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'TypingIndicatorView')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'AgentFileCellView')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'AgentImageCellView')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'SystemMessageView')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'ActionOptionsView')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'AgentMessageView')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'EndUserFileCellView')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'EndUserMessageView')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'EndUserImageCellView')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'StackedResponseOptionsView')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'ResponseOptionsView')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'ArticlesResponseView')]"/>
-    <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[@name='MessagingView.RenderState']"/>
+    <remove-node path="/api/package[@name='zendesk.messaging']/class[contains(@name, 'Event')]"/>
+    <remove-node path="/api/package[@name='zendesk.messaging']/interface[contains(@name, 'Event')]"/>
+    <remove-node path="/api/package[@name='zendesk.messaging']/class[contains(@name, 'BelvedereMediaResolverCallback')]"/>
+    <remove-node path="/api/package[@name='zendesk.messaging']/class[contains(@name, 'MessagingDialog')]"/>
 </metadata>

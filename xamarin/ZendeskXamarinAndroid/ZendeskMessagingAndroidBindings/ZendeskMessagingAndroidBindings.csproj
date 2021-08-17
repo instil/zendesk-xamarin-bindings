@@ -14,8 +14,8 @@
     <AssemblyName>ZendeskMessagingAndroid</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <Deterministic>True</Deterministic>
-    <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
-    <AndroidClassParser>jar2xml</AndroidClassParser>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+    <AndroidClassParser>class-parse</AndroidClassParser>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
@@ -35,7 +35,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidClassParser>class-parse</AndroidClassParser>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -183,18 +182,19 @@
     <LibraryProjectZip Include="..\..\..\android\messaging-5.2.0.aar">
       <Link>Jars\messaging-5.2.0.aar</Link>
     </LibraryProjectZip>
-    <EmbeddedReferenceJar Include="..\..\..\android\common-ui-4.0.2.aar">
-      <Link>Jars\common-ui-4.0.2.aar</Link>
-    </EmbeddedReferenceJar>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ZendeskMessagingApiAndroidBindings\ZendeskMessagingApiAndroidBindings.csproj">
-      <Project>{FBA5B6D6-4B45-47F1-8928-D5FCD7BB5196}</Project>
-      <Name>ZendeskMessagingApiAndroidBindings</Name>
+    <ProjectReference Include="..\ZendeskCommonUiAndroidBindings\ZendeskCommonUiAndroidBindings.csproj">
+      <Project>{7793853D-6BEA-4C2F-B7B6-5555835DC306}</Project>
+      <Name>ZendeskCommonUiAndroidBindings</Name>
     </ProjectReference>
     <ProjectReference Include="..\ZendeskSdkConfigurationsAndroidBindings\ZendeskSdkConfigurationsAndroidBindings.csproj">
       <Project>{0A339381-7472-493E-BC45-C635F17BD9AD}</Project>
       <Name>ZendeskSdkConfigurationsAndroidBindings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZendeskMessagingApiAndroidBindings\ZendeskMessagingApiAndroidBindings.csproj">
+      <Project>{FBA5B6D6-4B45-47F1-8928-D5FCD7BB5196}</Project>
+      <Name>ZendeskMessagingApiAndroidBindings</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
