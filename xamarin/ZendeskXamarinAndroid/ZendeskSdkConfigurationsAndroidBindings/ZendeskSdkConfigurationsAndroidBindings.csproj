@@ -11,7 +11,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ZendeskSdkConfigurationsAndroidBindings</RootNamespace>
-    <AssemblyName>ZendeskSdkConfigurationsAndroidBindings</AssemblyName>
+    <AssemblyName>ZendeskSdkConfigurationsAndroid</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <Deterministic>True</Deterministic>
     <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>

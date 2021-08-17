@@ -28,11 +28,4 @@
     <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'ResponseOptionsView')]"/>
     <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[starts-with(@name, 'ArticlesResponseView')]"/>
     <remove-node path="/api/package[@name='zendesk.messaging.ui']/class[@name='MessagingView.RenderState']"/>
-
-<!--    <add-node path="/api/package[@name='zendesk.messaging']/class[@name='MessagingConfiguration.Builder']">
-        <method name="withEngines" return="Zendesk.Messaging.MessagingConfiguration.Builder" abstract="false" native="false" synchronized="false" static="false" final="false" deprecated="not deprecated" visibility="public">
-            <parameter name="engines" type="java.util.List&lt;zendesk.configurations.Configuration&gt;" />
-        </method>
-    </add-node>-->
-
 </metadata>
