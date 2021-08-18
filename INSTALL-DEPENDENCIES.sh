@@ -11,6 +11,7 @@ MESSAGING_API_VERSION="5.2.0"
 SDK_CONFIGURATIONS_VERSION="2.0.1"
 
 echo ""
+echo ""
 echo "Installing Android Dependencies…"
 
 echo ""
@@ -48,4 +49,16 @@ wget "${API}&path=com%2Fzendesk%2Fmessaging-api%2F${MESSAGING_API_VERSION}%2Fmes
 echo ""
 echo "Downloading SDK configurations version ${SDK_CONFIGURATIONS_VERSION}"
 wget "${API}&path=com%2Fzendesk%2Fsdk-configurations%2F${SDK_CONFIGURATIONS_VERSION}%2Fsdk-configurations-${SDK_CONFIGURATIONS_VERSION}.aar" -O android/sdk-configurations.aar
+
+echo ""
+echo ""
+echo "Installing iOS Dependencies…"
+
+cd apple
+git submodule update --init --recursive
+cd ..
+
+echo ""
+echo ""
+echo "Done!"
 
