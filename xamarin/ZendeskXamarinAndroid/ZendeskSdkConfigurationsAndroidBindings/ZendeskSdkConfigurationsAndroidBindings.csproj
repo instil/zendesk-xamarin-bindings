@@ -54,11 +54,11 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="..\..\..\android\sdk-configurations-2.0.1.aar">
-      <Link>Jars\sdk-configurations-2.0.1.aar</Link>
+    <LibraryProjectZip Include="..\..\..\android\sdk-configurations.aar">
+      <Link>Jars\sdk-configurations.aar</Link>
     </LibraryProjectZip>
-    <EmbeddedReferenceJar Include="..\..\..\android\java-common-2.0.0.jar">
-      <Link>Jars\java-common-2.0.0.jar</Link>
+    <EmbeddedReferenceJar Include="..\..\..\android\java-common.jar">
+      <Link>Jars\java-common.jar</Link>
     </EmbeddedReferenceJar>
   </ItemGroup>
   <ItemGroup>

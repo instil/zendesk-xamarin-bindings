@@ -54,11 +54,11 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="..\..\..\android\common-ui-4.0.2.aar">
-      <Link>Jars\common-ui-4.0.2.aar</Link>
+    <LibraryProjectZip Include="..\..\..\android\common-ui.aar">
+      <Link>Jars\common-ui.aar</Link>
     </LibraryProjectZip>
-    <EmbeddedReferenceJar Include="..\..\..\android\java-common-2.0.0.jar">
-      <Link>Jars\java-common-2.0.0.jar</Link>
+    <EmbeddedReferenceJar Include="..\..\..\android\java-common.jar">
+      <Link>Jars\java-common.jar</Link>
     </EmbeddedReferenceJar>
   </ItemGroup>
   <ItemGroup>
