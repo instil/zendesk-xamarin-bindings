@@ -78,3 +78,32 @@ https://developer.zendesk.com/documentation/classic-sdks/unified-sdk/ios/chat_en
 
 ## Android
 
+
+### Use Android Bindings
+
+Once the bindings have been produced, add all the following libraries as native references to the Android project:
+
+- ZendeskChatAndroid
+- ZendeskChatProvidersAndroid
+- ZendeskCommonUiAndroid
+- ZendeskMessagingAndroid
+- ZendeskMessagingApiAndroid
+- ZendeskSdkConfigurationsAndroid
+
+ Presenting a chat will then look something like this:
+
+ ```csharp
+
+using Zendesk.Chat;
+using Zendesk.Messaging;
+
+void ShowChat() {
+    MessagingActivity.Builder()
+        .WithEngines(ChatEngine.Engine())
+        .Show(this);
+}
+
+ ```
+
+ For reference: 
+ https://developer.zendesk.com/documentation/classic-sdks/unified-sdk/android/chat_engine/
