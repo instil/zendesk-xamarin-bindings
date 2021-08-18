@@ -1,15 +1,14 @@
 # README #
 
-Mostly to be written…
+## Install Dependencies
 
-## iOS
-
-### Get iOS SDKs
+From the top level folder run the following script:
 
 ```bash
-$ cd apple
-$ git submodule update --init --recursive
+$ ./INSTALL-DEPENDENCIES.sh
 ```
+
+## iOS
 
 ### Generate iOS Bindings
 
