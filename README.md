@@ -1,5 +1,9 @@
 # README #
 
+Currently, only Chat is supported so the following instructions focus on that. Should another SDK be required, the same pattern should be followed but some instructions here (especially around the Android dependencies) should be updated accordingly.
+
+Let's get going…
+
 ## Install Dependencies
 
 From the top level folder run the following script:
@@ -24,7 +28,7 @@ $ sharpie bind --sdk=iphoneos14.5 --output="-Definitions/ChatSDK" --namespace="Z
 The tool does not produce perfect binding definitions, some adjustments will almost always need to be made. Particularly around `[Protocol]` which seems to require a `[BaseType(typeof(NSObject))]` to work in generated code.
 
 
-Open the ZendeskXamarinBindings solution and check that the definitions in the `ApiDefinitions.cs` and `StructsAndEnums.cs` files are correct for your usage. Then build & run. The output will be produced within the projects `/bin` folder
+Open the ZendeskXamariniOSBindings solution and check that the definitions in the `ApiDefinitions.cs` and `StructsAndEnums.cs` files are correct for your usage. Then build & run. The output will be produced within the projects `/bin` folder
 
 Once bindings are generated, locate the `ZendeskiOS.dll` file and the `ZendeskiOS.resources` folder within `/bin` and copy them to the project where there are to be used. It's very important that the `.resources` folder lives in the same location as the `.dll` package.
 
@@ -34,7 +38,7 @@ https://github.com/xamarin/xamarin-macios/issues/6246#issuecomment-825584496
 
 ### Use iOS Bindings
 
-Once the bindings have been produced, add them as a native reference to the iOS project. Presenting a chat view controller will then look something like this:
+Once the bindings have been produced, add the `.dll` as a native reference to the iOS project. Presenting a chat view controller will then look something like this:
 
 ```csharp
 
@@ -62,12 +66,25 @@ For reference:
 https://developer.zendesk.com/documentation/classic-sdks/unified-sdk/ios/chat_engine/
 
 
+### Adding support for another Zendesk iOS SDK
+
+iOS can avail of a 'fat' `.dll` containing all the required frameworks so adding something new is quite simple.
+
+1. Add a new submodule dependency for the xcframework that you want to add (e.g. `git@github.com:zendesk/answer_bot_sdk_ios.git`)
+2. Open the ZendeskXamariniOSBindings solution and the `.xcframework` as a Native Reference
+3. Add any required public APIs to the bindings through an entry in `ApiDefinitions.cs` (and `StructsAndEnums.cs` if required)
+    (You can use Objective Sharpie as described above and/or [use the official reference](https://docs.microsoft.com/en-us/xamarin/cross-platform/macios/binding/binding-types-reference)).
+4. Build and run as usual
+
 ## Android
+
+### Generate Android Bindings
+
 
 
 ### Use Android Bindings
 
-Once the bindings have been produced, add all the following libraries as native references to the Android project:
+Once the bindings have been produced, add all the following `.dll` files as native references to the Android project:
 
 - ZendeskChatAndroid
 - ZendeskChatProvidersAndroid
@@ -75,6 +92,18 @@ Once the bindings have been produced, add all the following libraries as native 
 - ZendeskMessagingAndroid
 - ZendeskMessagingApiAndroid
 - ZendeskSdkConfigurationsAndroid
+
+Now add the required Nuget dependencies:
+
+- Google.Gson
+- Softeq.ZendeskBelvedere
+- Square.OkHttp3
+- Square.OkHttp3.LoggingInterceptor
+- Square.Picasso
+- Square.Retrofit2
+- Square.Retrofit2.ConverterGson
+- Xamarin.Google.Dagger
+- Xamarin.JavaX.Inject
 
  Presenting a chat will then look something like this:
 
