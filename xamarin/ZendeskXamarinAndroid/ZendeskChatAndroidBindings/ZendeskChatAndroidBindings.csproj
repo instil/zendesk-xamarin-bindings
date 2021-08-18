@@ -54,8 +54,8 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="..\..\..\android\chat-3.2.0.aar">
-      <Link>Jars\chat-3.2.0.aar</Link>
+    <LibraryProjectZip Include="..\..\..\android\chat.aar">
+      <Link>Jars\chat.aar</Link>
     </LibraryProjectZip>
   </ItemGroup>
   <ItemGroup>

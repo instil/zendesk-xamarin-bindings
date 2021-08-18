@@ -179,8 +179,8 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="..\..\..\android\messaging-5.2.0.aar">
-      <Link>Jars\messaging-5.2.0.aar</Link>
+    <LibraryProjectZip Include="..\..\..\android\messaging.aar">
+      <Link>Jars\messaging.aar</Link>
     </LibraryProjectZip>
   </ItemGroup>
   <ItemGroup>

@@ -54,11 +54,11 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="..\..\..\android\messaging-api-5.2.0.aar">
-      <Link>Jars\messaging-api-5.2.0.aar</Link>
+    <LibraryProjectZip Include="..\..\..\android\messaging-api.aar">
+      <Link>Jars\messaging-api.aar</Link>
     </LibraryProjectZip>
-    <EmbeddedReferenceJar Include="..\..\..\android\java-common-2.0.0.jar">
-      <Link>Jars\java-common-2.0.0.jar</Link>
+    <EmbeddedReferenceJar Include="..\..\..\android\java-common.jar">
+      <Link>Jars\java-common.jar</Link>
     </EmbeddedReferenceJar>
   </ItemGroup>
   <ItemGroup>

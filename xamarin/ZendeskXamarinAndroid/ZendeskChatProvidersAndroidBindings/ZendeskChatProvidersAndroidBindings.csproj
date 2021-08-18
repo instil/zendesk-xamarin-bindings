@@ -54,17 +54,17 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="..\..\..\android\chat-providers-3.3.0.aar">
-      <Link>Jars\chat-providers-3.3.0.aar</Link>
+    <LibraryProjectZip Include="..\..\..\android\chat-providers.aar">
+      <Link>Jars\chat-providers.aar</Link>
     </LibraryProjectZip>
-    <EmbeddedReferenceJar Include="..\..\..\android\java-common-2.0.0.jar">
-      <Link>Jars\java-common-2.0.0.jar</Link>
+    <EmbeddedReferenceJar Include="..\..\..\android\java-common.jar">
+      <Link>Jars\java-common.jar</Link>
     </EmbeddedReferenceJar>
-    <EmbeddedReferenceJar Include="..\..\..\android\chat-visitor-client-8.3.0.jar">
-      <Link>Jars\chat-visitor-client-8.3.0.jar</Link>
+    <EmbeddedReferenceJar Include="..\..\..\android\chat-visitor-client.jar">
+      <Link>Jars\chat-visitor-client.jar</Link>
     </EmbeddedReferenceJar>
-    <EmbeddedReferenceJar Include="..\..\..\android\chat-socket-client-6.1.0.jar">
-      <Link>Jars\chat-socket-client-6.1.0.jar</Link>
+    <EmbeddedReferenceJar Include="..\..\..\android\chat-socket-client.jar">
+      <Link>Jars\chat-socket-client.jar</Link>
     </EmbeddedReferenceJar>
   </ItemGroup>
   <ItemGroup>
