@@ -1,4 +1,4 @@
-REPO="https://zendesk.jfrog.io/ui/native/repo/com/zendesk"
+API="https://zendesk.jfrog.io/ui/api/v1/download?repoKey=repo"
 
 CHAT_SOCKET_CLIENT_VERSION="6.1.0"
 CHAT_VERSION="3.2.0"
@@ -15,37 +15,37 @@ echo "Installing Android Dependencies…"
 
 echo ""
 echo "Downloading chat socket client version ${CHAT_SOCKET_CLIENT_VERSION}"
-curl "${REPO}/chat-socket-client/${CHAT_SOCKET_CLIENT_VERSION}/chat-socket-client-${CHAT_SOCKET_CLIENT_VERSION}.jar" -s -o android/chat-socket-client.jar
+wget "${API}&path=com%2Fzendesk%2Fchat-socket-client%2F${CHAT_SOCKET_CLIENT_VERSION}%2Fchat-socket-client-${CHAT_SOCKET_CLIENT_VERSION}.jar" -O android/chat-socket-client.jar
 
 echo ""
 echo "Downloading chat version ${CHAT_VERSION}"
-curl "${REPO}/chat/${CHAT__VERSION}/chat-${CHAT_VERSION}.aar" -s -o android/chat.aar
+wget "${API}&path=com%2Fzendesk%2Fchat%2F${CHAT_VERSION}%2Fchat-${CHAT_VERSION}.aar" -O android/chat.aar
 
 echo ""
 echo "Downloading chat providers version ${CHAT_PROVIDERS_VERSION}"
-curl "${REPO}/chat-providers/${CHAT_PROVIDERS_VERSION}/chat-providers-${CHAT_PROVIDERS_VERSION}.aar" -s -o android/chat-providers.aar
+wget "${API}&path=com%2Fzendesk%2Fchat-providers%2F${CHAT_PROVIDERS_VERSION}%2Fchat-providers-${CHAT_PROVIDERS_VERSION}.aar" -O android/chat-providers.aar
 
 echo ""
 echo "Downloading chat visitor client version ${CHAT_VISTOR_CLIENT_VERSION}"
-curl "${REPO}/chat-visitor-client/${CHAT_VISTOR_CLIENT_VERSION}/chat-visitor-client-${CHAT_VISTOR_CLIENT_VERSION}.jar" -s -o android/chat-visitor-client.jar
+wget "${API}&path=com%2Fzendesk%2Fchat-visitor-client%2F${CHAT_VISTOR_CLIENT_VERSION}%2Fchat-visitor-client-${CHAT_VISTOR_CLIENT_VERSION}.jar" -O android/chat-visitor-client.jar
 
 echo ""
 echo "Downloading common UI version ${COMMON_UI_VERSION}"
-curl "${REPO}/common-ui/${COMMON_UI_VERSION}/common-ui-${COMMON_UI_VERSION}.aar" -s -o android/common-ui.aar
+wget "${API}&path=com%2Fzendesk%2Fcommon-ui%2F${COMMON_UI_VERSION}%2Fcommon-ui-${COMMON_UI_VERSION}.aar" -O android/common-ui.aar
 
 echo ""
 echo "Downloading Java common version ${JAVA_COMMON_VERSION}"
-curl "${REPO}/java-common/${JAVA_COMMON_VERSION}/java-common-${JAVA_COMMON_VERSION}.jar" -s -o android/java-common.jar
+wget "${API}&path=com%2Fzendesk%2Fjava-common%2F${JAVA_COMMON_VERSION}%2Fjava-common-${JAVA_COMMON_VERSION}.jar" -O android/java-common.jar
 
 echo ""
 echo "Downloading messaging version ${MESSAGING_VERSION}"
-curl "${REPO}/messaging/${MESSAGING_VERSION}/messaging-${MESSAGING_VERSION}.aar" -s -o android/messaging.aar
+wget "${API}&path=com%2Fzendesk%2Fmessaging%2F${MESSAGING_VERSION}%2Fmessaging-${MESSAGING_VERSION}.aar" -O android/messaging.aar
 
 echo ""
 echo "Downloading messaging API version ${MESSAGING_API_VERSION}"
-curl "${REPO}/messaging-api/${MESSAGING_API_VERSION}/messaging-api-${MESSAGING_API_VERSION}.aar" -s -o android/messaging-api.aar
+wget "${API}&path=com%2Fzendesk%2Fmessaging-api%2F${MESSAGING_API_VERSION}%2Fmessaging-api-${MESSAGING_API_VERSION}.aar" -O android/messaging-api.aar
 
 echo ""
 echo "Downloading SDK configurations version ${SDK_CONFIGURATIONS_VERSION}"
-curl "${REPO}/sdk-configurations/${SDK_CONFIGURATIONS_VERSION}/sdk-configurations-${SDK_CONFIGURATIONS_VERSION}.aar" -s -o android/sdk-configurations.aar
+wget "${API}&path=com%2Fzendesk%2Fsdk-configurations%2F${SDK_CONFIGURATIONS_VERSION}%2Fsdk-configurations-${SDK_CONFIGURATIONS_VERSION}.aar" -O android/sdk-configurations.aar
 
