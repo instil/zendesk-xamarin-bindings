@@ -407,6 +407,7 @@ ASALocalRun/
 # Local History for Visual Studio
 .localhistory/
 
-# Apple stuff
-Pods/
-apple/build/
+# Dependencies
+apple/*.xcframework
+android/*.jar
+android/*.aar
