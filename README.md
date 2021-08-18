@@ -12,32 +12,19 @@ $ ./INSTALL-DEPENDENCIES.sh
 
 ### Generate iOS Bindings
 
-We use Objective Sharpie from top level dir
+The required surface area for the API is quite slim compared to everything that the SDKs offer. To get messaging with chat for example, we only need a handful of classes and methods. Objective Sharpie can help produce API Definitions but it will often make mistakes and will attempt to output everything that the SDK exposes. So ultimately the definitions are handcrafted, but it's useful to begin by pasting content from the Objective Sharpie output.
+
+To run Objective Sharpie on an SDK:
+
 
 ```bash
 $ sharpie bind --sdk=iphoneos14.5 --output="-Definitions/ChatSDK" --namespace="ZendeskiOS" --scope="chat_sdk_ios/ChatSDK.framework/Headers" "chat_sdk_ios/ChatSDK.framework/Headers/ChatSDK-Swift.h"
-
-$ sharpie bind --sdk=iphoneos14.5 --output="Definitions/ChatProvidersSDK" --namespace="ZendeskiOS" --scope="chat_providers_sdk_ios/ChatProvidersSDK.framework/Headers" "chat_providers_sdk_ios/ChatProvidersSDK.framework/Headers/ChatProvidersSDK-Swift.h"
-
-$ sharpie bind --sdk=iphoneos14.5 --output="Definitions/MessagingSDK" --namespace="ZendeskiOS" --scope="messaging_sdk_ios/MessagingSDK.framework/Headers" "messaging_sdk_ios/MessagingSDK.framework/Headers/MessagingSDK-Swift.h"
-
-$ sharpie bind --sdk=iphoneos14.5 --output="Definitions/MessagingAPI" --namespace="ZendeskiOS" --scope="messagingapi_sdk_ios/MessagingAPI.framework/Headers" "messagingapi_sdk_ios/MessagingAPI.framework/Headers/MessagingAPI-Swift.h"
-
-$ sharpie bind --sdk=iphoneos14.5 --output="Definitions/SDKConfigurations" --namespace="ZendeskiOS" --scope="sdkconfigurations_sdk_ios/SDKConfigurations.framework/Headers" "sdkconfigurations_sdk_ios/SDKConfigurations.framework/Headers/SDKConfigurations-Swift.h"
-
-$ sharpie bind --sdk=iphoneos14.5 --output="Definitions/CommonUISDK" --namespace="ZendeskiOS" --scope="commonui_sdk_ios/CommonUISDK.framework/Headers" "commonui_sdk_ios/CommonUISDK.framework/Headers/CommonUISDK-Swift.h"
 ```
 
-Currently the process from here is quite manual unfortunately. We need to copy and paste the contents of each of the generated `ApiDefinitions.cs` and `StructsAndEnums.cs` files into the main files included in the bindings project. Some parts will not compile and are safe to remove such as all `IsEqual`, `DebugDescription` and `Description` methods. And the Swift categories are safe to add into their main class definitions.
-
-However, with the main interfaces in place for these packages, it's unlikely to be necessary to run `sharpie` again here. Instead, consider manually adding / adjusting the definitions.
-
-If other SDK packages need to be supported, then `sharpie` can help produce the binding definitions.
-
-Objective Sharpie does not produce perfect binding definitions, some adjustments will almost always need to be made. Particularly around `[Protocol]` which seems to require a `[BaseType(typeof(NSObject))]` to work in generated code.
+The tool does not produce perfect binding definitions, some adjustments will almost always need to be made. Particularly around `[Protocol]` which seems to require a `[BaseType(typeof(NSObject))]` to work in generated code.
 
 
-Open the bindings project and check that the definitions are correct for your usage. Then build & run. The output will be produced within the projects `/bin` folder
+Open the ZendeskXamarinBindings solution and check that the definitions in the `ApiDefinitions.cs` and `StructsAndEnums.cs` files are correct for your usage. Then build & run. The output will be produced within the projects `/bin` folder
 
 Once bindings are generated, locate the `ZendeskiOS.dll` file and the `ZendeskiOS.resources` folder within `/bin` and copy them to the project where there are to be used. It's very important that the `.resources` folder lives in the same location as the `.dll` package.
 
@@ -91,7 +78,7 @@ Once the bindings have been produced, add all the following libraries as native 
 
  Presenting a chat will then look something like this:
 
- ```csharp
+```csharp
 
 using Zendesk.Chat;
 using Zendesk.Messaging;
