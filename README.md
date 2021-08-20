@@ -132,8 +132,7 @@ void ShowChat() {
         .WithEngines(ChatEngine.Engine())
         .Show(this);
 }
-
- ```
+```
 
  For reference: 
  https://developer.zendesk.com/documentation/classic-sdks/unified-sdk/android/chat_engine/
