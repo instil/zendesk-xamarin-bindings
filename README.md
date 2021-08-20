@@ -197,6 +197,8 @@ public partial class MessagingActivity : global::AndroidX.AppCompat.App.AppCompa
 
 After making any amendments to the `Transforms/Metadata.xml` file, the project will require a Rebuild to apply the latest changes.
 
+For any additional JAR / AAR dependencies, please add these to the `INSTALL-DEPENDENCIES.sh` script to ensure that they are installed when required. Note the entries for `android/*.aar` and `android/*.jar` in the `.gitignore`…
+
 
 
 
