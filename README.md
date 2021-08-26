@@ -80,6 +80,7 @@ That said, iOS can avail of a 'fat' `.dll` containing all the required framework
 
 1. Add a new submodule dependency for the xcframework that you want to add (e.g. `git@github.com:zendesk/answer_bot_sdk_ios.git`)
 2. Open the ZendeskXamariniOSBindings solution and the `.xcframework` as a Native Reference
+    **NOTE: Visual Studio will add `.xcframework` references as `Static` but this is a bug. This needs to be changed to `Framework` in the `.csproj` file**
 3. Add any required public APIs to the bindings through an entry in `ApiDefinitions.cs` (and `StructsAndEnums.cs` if required)
     (You can use Objective Sharpie as described above and/or [use the official reference](https://docs.microsoft.com/en-us/xamarin/cross-platform/macios/binding/binding-types-reference)).
 4. Build and run as usual
