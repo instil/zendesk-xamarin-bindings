@@ -58,10 +58,6 @@
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
-    <NativeReference Include="..\..\..\apple\commonui_sdk_ios\CommonUISDK.xcframework">
-      <Kind>Static</Kind>
-      <SmartLink>False</SmartLink>
-    </NativeReference>
     <NativeReference Include="..\..\..\apple\messaging_sdk_ios\MessagingSDK.xcframework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
@@ -71,6 +67,10 @@
       <SmartLink>False</SmartLink>
     </NativeReference>
     <NativeReference Include="..\..\..\apple\chat_sdk_ios\ChatSDK.xcframework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include="..\..\..\apple\commonui_sdk_ios\CommonUISDK.xcframework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
