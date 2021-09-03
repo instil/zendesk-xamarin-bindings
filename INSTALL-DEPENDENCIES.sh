@@ -14,6 +14,8 @@ echo ""
 echo ""
 echo "Installing Android Dependencies…"
 
+mkdir android
+
 echo ""
 echo "Downloading chat socket client version ${CHAT_SOCKET_CLIENT_VERSION}"
 wget "${API}&path=com%2Fzendesk%2Fchat-socket-client%2F${CHAT_SOCKET_CLIENT_VERSION}%2Fchat-socket-client-${CHAT_SOCKET_CLIENT_VERSION}.jar" -O android/chat-socket-client.jar
@@ -60,5 +62,5 @@ cd ..
 
 echo ""
 echo ""
-echo "Done!"
+echo "Done!±"
 
