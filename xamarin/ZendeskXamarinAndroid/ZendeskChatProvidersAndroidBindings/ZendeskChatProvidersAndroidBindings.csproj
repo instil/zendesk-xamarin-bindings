@@ -60,12 +60,6 @@
     <EmbeddedReferenceJar Include="..\..\..\android\java-common.jar">
       <Link>Jars\java-common.jar</Link>
     </EmbeddedReferenceJar>
-    <EmbeddedReferenceJar Include="..\..\..\android\chat-visitor-client.jar">
-      <Link>Jars\chat-visitor-client.jar</Link>
-    </EmbeddedReferenceJar>
-    <EmbeddedReferenceJar Include="..\..\..\android\chat-socket-client.jar">
-      <Link>Jars\chat-socket-client.jar</Link>
-    </EmbeddedReferenceJar>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Square.OkHttp3">
@@ -89,6 +83,12 @@
     <PackageReference Include="Square.OkHttp3.LoggingInterceptor">
       <Version>4.4.1</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZendeskChatVisitorClientAndroidBindings\ZendeskChatVisitorClientAndroidBindings.csproj">
+      <Project>{D7D6C151-E17C-4AA8-BD3B-84EA7C7E82E6}</Project>
+      <Name>ZendeskChatVisitorClientAndroidBindings</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
