@@ -62,6 +62,17 @@ namespace ZendeskiOS {
 	// @interface ZDKMessagingConfiguration : NSObject <ZDKConfiguration>
 	[BaseType(typeof(ZDKConfiguration))]
 	interface ZDKMessagingConfiguration {
+		// @property (copy, nonatomic) NSString * _Nonnull name;
+		[Export ("name")]
+		string Name { get; set; }
+
+		// @property (nonatomic, strong) UIImage * _Nonnull botAvatar;
+		[Export ("botAvatar", ArgumentSemantic.Strong)]
+		UIImage BotAvatar { get; set; }
+
+		// @property (nonatomic) BOOL isMultilineResponseOptionsEnabled;
+		[Export ("isMultilineResponseOptionsEnabled")]
+		bool IsMultilineResponseOptionsEnabled { get; set; }
 	}
 
 	[Protocol]
