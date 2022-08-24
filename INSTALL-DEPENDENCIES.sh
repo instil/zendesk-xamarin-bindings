@@ -10,11 +10,11 @@ MESSAGING_VERSION="5.2.0"
 MESSAGING_API_VERSION="5.2.0"
 SDK_CONFIGURATIONS_VERSION="2.0.1"
 
+mkdir android
+
 echo ""
 echo ""
 echo "Installing Android Dependencies…"
-
-mkdir android
 
 echo ""
 echo "Downloading chat socket client version ${CHAT_SOCKET_CLIENT_VERSION}"
@@ -62,5 +62,4 @@ cd ..
 
 echo ""
 echo ""
-echo "Done!±"
-
+echo "Done!"

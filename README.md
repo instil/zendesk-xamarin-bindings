@@ -8,6 +8,12 @@ Let's get going…
 
 ## Install Dependencies
 
+The installer uses `wget` so ensure you have that tool first:
+
+```bash
+$ brew install wget
+````
+
 From the top level folder run the following script:
 
 ```bash

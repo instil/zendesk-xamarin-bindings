@@ -6,7 +6,7 @@ using UIKit;
 
 namespace ZendeskiOS {
 
-	[BaseType(typeof(NSObject))]
+	[BaseType (typeof (NSObject))]
 	[Model, Protocol]
 	interface ZDKEngine {
 	}
@@ -30,11 +30,6 @@ namespace ZendeskiOS {
 	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface ZDKChat {
-		// @property (readonly, nonatomic, strong, class) ZDKChat * _Nullable instance;
-		[Static]
-		[NullAllowed, Export("instance", ArgumentSemantic.Strong)]
-		ZDKChat Instance { get; }
-
 		// +(void)initializeWithAccountKey:(NSString * _Nonnull)accountKey appId:(NSString * _Nullable)appId queue:(dispatch_queue_t _Nonnull)queue;
 		[Static]
 		[Export("initializeWithAccountKey:appId:queue:")]
@@ -44,10 +39,6 @@ namespace ZendeskiOS {
 		[Static]
 		[Export("initializeWithAccountKey:queue:")]
 		void InitializeWithAccountKey(string accountKey, DispatchQueue queue);
-
-		// -(void)setIdentityWithAuthenticator:(id<ZDKJWTAuthenticator> _Nonnull)authenticator;
-		[Export("setIdentityWithAuthenticator:")]
-		void SetIdentityWithAuthenticator(ZDKJWTAuthenticator authenticator);
 	}
 
 	[BaseType(typeof(NSObject))]
@@ -71,19 +62,21 @@ namespace ZendeskiOS {
 	// @interface ZDKMessagingConfiguration : NSObject <ZDKConfiguration>
 	[BaseType(typeof(ZDKConfiguration))]
 	interface ZDKMessagingConfiguration {
+		// @property (copy, nonatomic) NSString * _Nonnull name;
+		[Export ("name")]
+		string Name { get; set; }
+
+		// @property (nonatomic, strong) UIImage * _Nonnull botAvatar;
+		[Export ("botAvatar", ArgumentSemantic.Strong)]
+		UIImage BotAvatar { get; set; }
+
+		// @property (nonatomic) BOOL isMultilineResponseOptionsEnabled;
+		[Export ("isMultilineResponseOptionsEnabled")]
+		bool IsMultilineResponseOptionsEnabled { get; set; }
 	}
 
 	[Protocol]
 	[BaseType(typeof(NSObject))]
 	interface ZDKConfiguration {
-	}
-
-	[Protocol]
-	[BaseType(typeof(NSObject))]
-	interface ZDKJWTAuthenticator {
-		// @required -(void)getToken:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
-		[Abstract]
-		[Export("getToken:")]
-		void GetToken(Action<NSString, NSError> completion);
 	}
 }
