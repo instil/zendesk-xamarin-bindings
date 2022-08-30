@@ -30,6 +30,11 @@ namespace ZendeskiOS {
 	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface ZDKChat {
+		// @property (readonly, nonatomic, strong, class) ZDKChat * _Nullable instance;
+		[Static]
+		[NullAllowed, Export("instance", ArgumentSemantic.Strong)]
+		ZDKChat Instance { get; }
+
 		// +(void)initializeWithAccountKey:(NSString * _Nonnull)accountKey appId:(NSString * _Nullable)appId queue:(dispatch_queue_t _Nonnull)queue;
 		[Static]
 		[Export("initializeWithAccountKey:appId:queue:")]
@@ -39,6 +44,14 @@ namespace ZendeskiOS {
 		[Static]
 		[Export("initializeWithAccountKey:queue:")]
 		void InitializeWithAccountKey(string accountKey, DispatchQueue queue);
+
+		// -(void)setIdentityWithAuthenticator:(id<ZDKJWTAuthenticator> _Nonnull)authenticator;
+		[Export("setIdentityWithAuthenticator:")]
+		void SetIdentityWithAuthenticator(ZDKJWTAuthenticator authenticator);
+		
+		// -(void)resetIdentity:(void (^ _Nullable)(void))completion;
+		[Export ("resetIdentity:")]
+		void ResetIdentity ([NullAllowed] Action completion);
 	}
 
 	[BaseType(typeof(NSObject))]
@@ -78,5 +91,14 @@ namespace ZendeskiOS {
 	[Protocol]
 	[BaseType(typeof(NSObject))]
 	interface ZDKConfiguration {
+	}
+
+	[Model, Protocol]
+	[BaseType(typeof(NSObject))]
+	interface ZDKJWTAuthenticator {
+		// @required -(void)getToken:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
+		[Abstract]
+		[Export("getToken:")]
+		void GetToken(Action<NSString, NSError> completion);
 	}
 }
