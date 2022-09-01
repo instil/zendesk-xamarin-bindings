@@ -57,9 +57,9 @@
     <LibraryProjectZip Include="..\..\..\android\chat-providers.aar">
       <Link>Jars\chat-providers.aar</Link>
     </LibraryProjectZip>
-    <EmbeddedReferenceJar Include="..\..\..\android\java-common.jar">
+    <EmbeddedJar Include="..\..\..\android\java-common.jar">
       <Link>Jars\java-common.jar</Link>
-    </EmbeddedReferenceJar>
+    </EmbeddedJar>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Square.OkHttp3">
