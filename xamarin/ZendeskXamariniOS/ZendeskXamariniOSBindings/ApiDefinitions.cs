@@ -34,6 +34,10 @@ namespace ZendeskiOS {
 		[Static]
 		[NullAllowed, Export("instance", ArgumentSemantic.Strong)]
 		ZDKChat Instance { get; }
+		
+		// @property (nonatomic, strong) ZDKChatAPIConfiguration * _Nonnull configuration;
+		[Export("configuration", ArgumentSemantic.Strong)]
+		ZDKChatAPIConfiguration Configuration { get; set; }
 
 		// +(void)initializeWithAccountKey:(NSString * _Nonnull)accountKey appId:(NSString * _Nullable)appId queue:(dispatch_queue_t _Nonnull)queue;
 		[Static]
@@ -52,6 +56,60 @@ namespace ZendeskiOS {
 		// -(void)resetIdentity:(void (^ _Nullable)(void))completion;
 		[Export ("resetIdentity:")]
 		void ResetIdentity ([NullAllowed] Action completion);
+	}
+	
+	// @interface ZDKChatAPIConfiguration : NSObject
+	[BaseType(typeof(NSObject))]
+	interface ZDKChatAPIConfiguration {
+		// @property (copy, nonatomic) NSString * _Nullable visitorPathOne;
+		[NullAllowed, Export("visitorPathOne")]
+		string VisitorPathOne { get; set; }
+
+		// @property (copy, nonatomic) NSString * _Nonnull visitorPathTwo;
+		[Export("visitorPathTwo")]
+		string VisitorPathTwo { get; set; }
+
+		// @property (copy, nonatomic) NSString * _Nullable visitorPathTwoValue;
+		[NullAllowed, Export("visitorPathTwoValue")]
+		string VisitorPathTwoValue { get; set; }
+
+		// @property (copy, nonatomic) NSArray<NSString *> * _Nonnull tags;
+		[Export("tags", ArgumentSemantic.Copy)]
+		string[] Tags { get; set; }
+
+		// @property (copy, nonatomic) NSString * _Nullable department;
+		[NullAllowed, Export("department")]
+		string Department { get; set; }
+
+		// @property (nonatomic, strong) ZDKVisitorInfo * _Nullable visitorInfo;
+		[NullAllowed, Export("visitorInfo", ArgumentSemantic.Strong)]
+		ZDKVisitorInfo VisitorInfo { get; set; }
+	}
+	
+	// @interface ZDKVisitorInfo : NSObject
+	[BaseType(typeof(NSObject))]
+	[DisableDefaultCtor]
+	interface ZDKVisitorInfo {
+		// @property (readonly, nonatomic, strong, class) ZDKVisitorInfo * _Nonnull initial;
+		[Static]
+		[Export("initial", ArgumentSemantic.Strong)]
+		ZDKVisitorInfo Initial { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull name;
+		[Export("name")]
+		string Name { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull email;
+		[Export("email")]
+		string Email { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull phoneNumber;
+		[Export("phoneNumber")]
+		string PhoneNumber { get; }
+
+		// -(instancetype _Nonnull)initWithName:(NSString * _Nonnull)name email:(NSString * _Nonnull)email phoneNumber:(NSString * _Nonnull)phoneNumber;
+		[Export("initWithName:email:phoneNumber:")]
+		IntPtr Constructor(string name, string email, string phoneNumber);
 	}
 
 	[BaseType(typeof(NSObject))]
